@@ -1,0 +1,3 @@
+after u opened install.cmd
+Go to node_modules\discord.js\src\client\ClientDataManager.js:81
+and delete this "guild.channels.set(channel.id, channel);"
