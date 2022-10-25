@@ -6,7 +6,6 @@ chcp 65001 >nul
 :menu
 node .
 pause
-:1
 cls
 goto menu
 
