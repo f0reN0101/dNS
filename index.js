@@ -34,7 +34,7 @@ if (message.channel.type === "dm")
 }
 if (message.author.id == id) 
 {
-    console.log(`[ALERTE] Tu as envoyé un nitro : ${message.content}\n`.brightBlue)
+    console.log(`[ALERTE] You sent a nitro : ${message.content}\n`.brightBlue)
         return;
 }
 
@@ -56,9 +56,9 @@ let negativeMsg = [
 var pMsg = positiveMsg[Math.floor(Math.random() * positiveMsg.length)];
 var nMsg = negativeMsg[Math.floor(Math.random() * negativeMsg.length)];
 
-    console.log(`[`+`FOUND`.green +`]`, `[${groupe}] | de ${message.author.tag} : https://${nitrolink[0]}`);
+    console.log(`[`+`FOUND`.green +`]`, `[${groupe}] | by ${message.author.tag} : https://${nitrolink[0]}`);
             axios({ method: 'POST', url: `https://discordapp.com/api/v6/entitlements/gift-codes/${nitrocode}/redeem`, headers: { 'Authorization': token }})
-            .then(() => console.log(`[`+`${pMsg}`.green +`]`, `Nitro récuperé dans [${groupe}] | de [${message.author.tag}]`.brightGreen))
-            .catch(e => console.log(`[`+`${nMsg}`.red +`]`, `Ce nitro a déjà été utilisé ou/est invalide :/\n`))
+            .then(() => console.log(`[`+`${pMsg}`.green +`]`, `Nitro recovered in [${groupe}] | by [${message.author.tag}]`.brightGreen))
+            .catch(e => console.log(`[`+`${nMsg}`.red +`]`, `This nitro has already been used or/is invalid :/\n`))
 }
     });
